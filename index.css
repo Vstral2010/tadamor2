@@ -1,0 +1,124 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  direction: rtl;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Button styling */
+button {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#click-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Result display styling */
+.results {
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+
+/* Chart container styling */
+.chart-container {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Chart styling */
+.chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Bar styling with gradient */
+.bar {
+  width: 40px;
+  text-align: center;
+  color: white;
+  margin: 0 5px;
+  border-radius: 5px 5px 0 0;
+  transition: height 0.3s ease;
+}
+
+.bar:nth-child(1) { background: linear-gradient(180deg, #4CAF50, #2e7d32); }
+.bar:nth-child(2) { background: linear-gradient(180deg, #81C784, #388E3C); }
+.bar:nth-child(3) { background: linear-gradient(180deg, #A5D6A7, #43A047); }
+.bar:nth-child(4) { background: linear-gradient(180deg, #C8E6C9, #66BB6A); }
+.bar:nth-child(5) { background: linear-gradient(180deg, #E8F5E9, #81C784); }
+.bar:nth-child(6) { background: linear-gradient(180deg, #C5E1A5, #8BC34A); }
+.bar:nth-child(7) { background: linear-gradient(180deg, #AED581, #9CCC65); }
+
+.bar-label {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .results {
+    font-size: 1.4rem;
+  }
+
+  .chart {
+    height: 200px;
+  }
+
+  .bar {
+    width: 30px;
+  }
+
+  .bar-label {
+    font-size: 0.8rem;
+  }
+}
